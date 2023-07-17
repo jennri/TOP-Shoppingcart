@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
+
 export const Navbar = () => {
     return (
-        <div>
+        <nav>
             <div>
                 <p>This is the nav start</p>
             </div>
             <div>
                 <p>Logo goes here, links to home page</p>
             </div>
-            <div>
-                <Link to="/search"> Search </Link>
-                <Link to="/account"> Account </Link>
-                <Link to="/cart"> Cart </Link>
-
-            </div>
+            <ul>
+                <li><Link to="/search"> Search </Link></li>
+                <li><Link to="/account"> Account </Link></li>
+                <li><Link to="/cart"> Cart </Link></li>
+            </ul>
             <div>
                 <Link to="/">Home</Link>
                 <Link to="/blog">Blog</Link>
@@ -26,6 +26,8 @@ export const Navbar = () => {
             <div>
                 <p>This is the nav end</p>
             </div>
-        </div>
+        </nav>
     )
 }
+
+export default Navbar;
