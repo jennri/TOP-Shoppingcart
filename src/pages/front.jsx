@@ -2,6 +2,6 @@ import React from "react";
 
 export const Front = () => {
     return (
-        <div>This is the front page</div>
+        <div><h1>This is the front page</h1></div>
     )
 }

@@ -2,6 +2,6 @@ import React from "react";
 
 export const Cart = () => {
     return (
-        <div>cart</div>
+        <div><h1>This is the cart page</h1></div>
     )
 }

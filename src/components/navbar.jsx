@@ -18,9 +18,13 @@ export const Navbar = () => {
             </ul>
             <div>
                 <Link to="/">Home</Link>
+                <Link to="/new">New</Link>
+                <Link to="/sale">Sale</Link>
+                {/* This will be a filtered page of the product page */}
                 <Link to="/blog">Blog</Link>
                 <Link to="/products">Products</Link>
-                <Link to="/contact">Contact Us</Link>
+                {/* This will split into skincare and categories link */}
+                <Link to="/about-us">About Us</Link>
 
             </div>
             <div>
