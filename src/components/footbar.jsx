@@ -27,7 +27,7 @@ export const Footbar = () => {
                     <h1>Newsletter</h1>
                     <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
                     <form>
-                        <label for="subemail"></label>
+                        <label htmlFor="subemail"></label>
                         <input id="subemail" name="subemail" placeholder="Enter your email" type="email" required />
                         <button type="submit">Subscribe</button>
                     </form>

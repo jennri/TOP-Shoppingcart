@@ -2,12 +2,11 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/navbar.jsx'
 import { Footbar } from './components/footbar.jsx'
-
 import { Products } from './pages/shop/shop'
 import { Cart } from './pages/shop/cart'
-
 import { Front } from './pages/front'
 import { Contact } from './pages/contact'
+import { ShopContextProvider } from "./context/shop-context"
 
 // Importing from static folder
 import { Termsofservice } from './pages/static/tos'
@@ -23,6 +22,8 @@ import { NotFound } from './pages/static/404'
 function App() {
   return (
     <div className="App">
+      {/* All components will have access to shop inventory */}
+      <ShopContextProvider>
       <Router>
         {/* Navbar will be present on all pages */}
         <Navbar />
@@ -42,6 +43,7 @@ function App() {
           </Routes>
         <Footbar />
       </Router>
+      </ShopContextProvider>
     </div>
   );
 }
