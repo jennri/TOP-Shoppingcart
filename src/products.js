@@ -21,7 +21,7 @@ export const PRODUCTS = [
         // img: product2
     },
     {
-        id: 3,
+        id: 4,
         name: "Even more stuff",
         price: 9.9,
         // img: product2
