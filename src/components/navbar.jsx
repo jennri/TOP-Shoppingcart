@@ -1,22 +1,30 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
+import './navbar.css'
+import { } from 'antd'
+import { Col, Row } from 'antd';
+import { UserOutlined, SearchOutlined, ShoppingFilled } from '@ant-design/icons'
+
 
 export const Navbar = () => {
     return (
         <nav>
-            <div>
-                <p>This is the nav start</p>
-            </div>
-            <div>
-                <p>Logo goes here, links to home page</p>
-            </div>
-            <ul>
-                <li><Link to="/search"> Search </Link></li>
-                <li><Link to="/account"> Account </Link></li>
-                <li><Link to="/cart"> Cart </Link></li>
-            </ul>
-            <div>
+            <Row>
+                <Col span={6}><p>Empty Space</p></Col>
+                <Col span={12}>
+                    <p>Logo goes here, links to home page</p>
+                </Col>
+
+                <Col span={6}>
+                    <Link to="/search"> <SearchOutlined /> </Link>
+                    <Link to="/account"> <UserOutlined /> </Link>
+                    <Link to="/cart"> <ShoppingFilled /> </Link>
+                </Col>
+            </Row>
+
+            <Row>
+            <Col span={24}>
                 <Link to="/">Home</Link>
                 <Link to="/new">New</Link>
                 <Link to="/sale">Sale</Link>
@@ -25,11 +33,8 @@ export const Navbar = () => {
                 <Link to="/products">Products</Link>
                 {/* This will split into skincare and categories link */}
                 <Link to="/about-us">About Us</Link>
-
-            </div>
-            <div>
-                <p>This is the nav end</p>
-            </div>
+            </Col>
+            </Row>
         </nav>
     )
 }
