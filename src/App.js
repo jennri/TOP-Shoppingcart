@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/navbar.jsx'
 import { Footbar } from './components/footbar.jsx'
 import { Products } from './pages/shop/shop'
-import { Cart } from './pages/shop/cart'
+import { CartModal } from './pages/shop/cart-modal'
 import { Front } from './pages/front'
 import { Contact } from './pages/contact'
 import { ShopContextProvider } from "./context/shop-context"
@@ -30,7 +30,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Front />}/> 
             <Route path="/products" element={<Products />}/> 
-            <Route path="/cart" element={<Cart />}/> 
+            <Route path="/cart" element={<CartModal />}/> 
             <Route path="/contact-us" element={<Contact />}/> 
             <Route path="/terms-of-services" element={<Termsofservice />}/> 
             <Route path="/shipping-policy" element={<Shippingpolicy />}/> 
