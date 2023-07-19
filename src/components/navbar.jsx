@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
+import { Cart } from '../pages/shop/cart'
 
 import './bar.css'
-import { Input, Button } from 'antd'
+import '../pages/shop/cart-modal.css'
+
+import { Input, Button, Modal } from 'antd'
 import { Col, Row } from 'antd';
 import { UserOutlined, 
         SearchOutlined, 
@@ -12,8 +15,18 @@ import { UserOutlined,
 import logo from '../assets/logo-transparent-title.png'
     
 
-
 export const Navbar = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const showModal = () => {
+      setIsModalOpen(true);
+    };
+    const handleOk = () => {
+      setIsModalOpen(false);
+    };
+    const handleCancel = () => {
+      setIsModalOpen(false);
+    };
+
     return (
         <nav>
             <Row>
@@ -35,7 +48,18 @@ export const Navbar = () => {
                     <div className="nav-bar__right-icon-container">
                     <Link to="/account"> <UserOutlined /> </Link>
                     <Link><HeartOutlined /></Link>
-                    <Link to="/cart"> <ShoppingFilled /> </Link>
+                    <Link onClick={showModal}> <ShoppingFilled /> </Link>
+                    <Modal className='modal-test' open={isModalOpen} onOk={handleOk} onCancel={handleCancel} 
+                    okText="Checkout"
+                    cancelText="Back"
+                    okButtonProps={{
+                       
+                      }}
+                    cancelButtonProps
+                 
+                    >
+                        <Cart />
+                    </Modal>
                     </div>
                 </Col>
             </Row>

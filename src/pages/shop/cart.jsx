@@ -25,7 +25,6 @@ export const Cart = () => {
                 {totalAmount > 0 ? (
                 <div>
                     <p> Subtotal ${totalAmount}</p>
-                    <button>CheckOut</button>
                 </div>
                 ) : (
                     <h1> Empty cart </h1>

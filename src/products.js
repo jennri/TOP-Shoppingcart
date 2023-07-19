@@ -25,5 +25,29 @@ export const PRODUCTS = [
         name: "Even more stuff",
         price: 9.9,
         // img: product2
+    }, 
+    {
+        id: 5,
+        name:"Even MORE stuff",
+        price: 9.5,
+        // img: product2
+    },
+    {
+        id: 6,
+        name: "Goly there's more!",
+        price: 12.9,
+        // img: product2
+    },
+    {
+        id: 7,
+        name: "Back to regular stuff",
+        price: 2.9,
+        // img: product2
+    },
+    {
+        id: 8,
+        name: "regular stuff v2",
+        price: 18.9,
+        // img: product2
     }
 ]
