@@ -1,0 +1,87 @@
+
+[class~='ant-col'] {
+    border: solid black 2px;
+    color: grey;
+}
+
+[class~='ant-col'] a {
+    color: grey;
+}
+
+/*
+
+Navbar styling
+
+*/
+
+.nav-bar__right-icon-container,
+.nav-bar__left-search-container {
+    position: absolute;
+    /* border: 1px solid red; */
+    bottom: 0.2em;
+    font-size: 25px;
+}
+
+.nav-bar__right-icon-container {
+    width: 50%;
+    right: 0.75em;
+}
+
+.nav-bar__right-icon-container svg{
+    padding-left: 0.75em;
+}
+
+/* setting min height in case image fails to load */
+.nav-bar__middle {
+    min-height: 10em;
+}
+
+.nav-bar__middle img {
+    width: 15em;
+}
+
+.nav-bar__left-search-container {
+    width: 100%;
+}
+
+.nav-bar__bottom--container {
+    width: 100%;
+    position: relative;
+}
+
+.nav-bar__bottom a {
+    /* border: 1px solid red; */
+    font-size: 1.5em;
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+}
+
+
+/*
+
+Footbar styling
+
+*/
+
+
+.foot-bar__left, 
+.foot-bar__right {
+    min-height: 25em;
+}
+
+.foot-bar__left > * {
+    /* border: 1px solid red; */
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.foot-bar__left a {
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+.foot-bar__right-container  {
+    border: 1px solid red;
+
+
+}
