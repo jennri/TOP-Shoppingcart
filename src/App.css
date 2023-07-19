@@ -1,6 +1,11 @@
+body {
+  overflow: auto;
+}
+
 .App {
   text-align: center;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
