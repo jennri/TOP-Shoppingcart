@@ -37,12 +37,9 @@ export const Footbar = () => {
                     <h2>Quick Help</h2>
                     <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
                         <Link to="/contact-us"> Contact us </Link>
-                        {/* My account */}
+                        <Link to="/account"> My Account </Link>
                         <Link to="/shipping-policy"> Shipping Policy </Link>
-                        {/* Order tracking */}
-                        {/* Customer Experience */}
-                        <Link to="/privacy-policy"> Privacy Policy </Link>
-                        <Link to="/refund-policy"> Refund Policy </Link>
+                        <Link to="/online-tracking"> Online Tracking </Link>
                         <Link to="/frequently-asked-questions"> FAQs </Link>
                     </Space>
                 </Col>
@@ -50,8 +47,11 @@ export const Footbar = () => {
                 <Col span={4} className="foot-bar__middle-about">
                     <h2>Get to know us</h2>
                     <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
+                        <Link to="/About Us"> About Us </Link>
+                        <Link to="/careers"> Careers </Link>
+                        <Link to="/customer-experience"> Customer Experience </Link>
+                        <Link to="/refund-policy"> Refund Policy </Link>
                         <Link to="/terms-of-services"> Terms of Services </Link>
-                        {/* Careers, About Us, Why Shop here */}
                     </Space>
                 </Col>
 

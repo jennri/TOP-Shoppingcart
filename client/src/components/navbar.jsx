@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Cart } from '../pages/shop/cart'
 
 import './bar.css'
@@ -17,11 +17,13 @@ import {
 import logo from '../assets/logo-transparent-title.png'
 
 export const Navbar = () => {
+    // This was copied and pated off npm-modal dependency example.
+    // Only change was the document.body.style.overflow, this is to prevent scrolling on the main page
+    // and just enable scrolling in the modal. When the modal is closed, scrolling is enabled. 
     const [modalIsOpen, setIsOpen] = React.useState(false);
     function openModal() {
         setIsOpen(true);
         document.body.style.overflow = 'hidden';
-
     }
     function closeModal() {
         document.body.style.overflow = 'scroll'
@@ -41,6 +43,11 @@ export const Navbar = () => {
 
     };
 
+    const navigate = useNavigate();
+    function toHomePage() {
+        navigate('/');
+    }
+
     return (
         <nav>
             <Row>
@@ -55,7 +62,7 @@ export const Navbar = () => {
                 </Col>
 
                 <Col span={12} className='nav-bar__middle'>
-                    <img src={logo} alt='logo' />
+                    <img src={logo} alt='logo' onClick={toHomePage}/>
                 </Col>
 
                 <Col span={6} className='nav-bar__right'>
@@ -64,6 +71,7 @@ export const Navbar = () => {
                         <Link><HeartOutlined /></Link>
                         <Link onClick={openModal}> <ShoppingFilled /> </Link>
 
+                        {/* Copied and pasted from npm-modal example */}
                         <Modal
                             isOpen={modalIsOpen}
                             onRequestClose={closeModal}

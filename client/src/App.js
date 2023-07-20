@@ -10,7 +10,7 @@ import { ShopContextProvider } from "./context/shop-context"
 // Importing from static folder
 import { Termsofservice } from './pages/static/tos'
 import { Shippingpolicy } from './pages/static/shipping'
-import { Privacypolicy } from './pages/static/privacy'
+import { Onlinetracking } from './pages/static/track'
 import { Refundpolicy } from './pages/static/refund'
 import { Faq } from './pages/static/faq'
 import { Blog } from './pages/static/blog'
@@ -32,7 +32,7 @@ function App() {
             <Route path="/contact-us" element={<Contact />}/> 
             <Route path="/terms-of-services" element={<Termsofservice />}/> 
             <Route path="/shipping-policy" element={<Shippingpolicy />}/> 
-            <Route path="/privacy-policy" element={<Privacypolicy />}/> 
+            <Route path="/online-tracking" element={<Onlinetracking />}/> 
             <Route path="/refund-policy" element={<Refundpolicy />}/> 
             <Route path="/frequently-asked-questions" element={<Faq />}/> 
             <Route path="/blog" element={<Blog />}/> 
