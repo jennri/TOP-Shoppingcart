@@ -17,6 +17,6 @@ mongoose.connect(dbURI)
 
     
 app.get('/message', (req, res) => {
-    res.json({ message: "hehe" });
+    res.json({ message: "Hello from the backend" });
 });
 
