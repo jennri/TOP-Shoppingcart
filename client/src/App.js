@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/navbar.jsx'
@@ -20,14 +19,6 @@ import { NotFound } from './pages/static/404'
 
 
 function App() {
-  const [message, setMessage] = useState("");
-
-useEffect(() => {
-    fetch("http://localhost:8000/message")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
-  }, []);
-
 
   return (
     <div className="App">
@@ -36,7 +27,6 @@ useEffect(() => {
       <Router>
         {/* Navbar will be present on all pages */}
         <Navbar />
-        {message}
         <Routes>
             <Route path="/" element={<Front />}/> 
             <Route path="/products" element={<Products />}/> 
