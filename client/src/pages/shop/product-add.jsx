@@ -29,10 +29,10 @@ export const ProductAdd = () => {
             data: newProduct
         })
         .then(() => {
-            console.log('Data has been sent to the server')
+            console.log('Data sucessfully posted')
         })
         .catch(() => {
-            console.log('Internal server error')
+            console.log('Data unable to be posted, internal server error')
         });
 
     }

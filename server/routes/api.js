@@ -13,17 +13,15 @@ router.post('/save', (req, res) => {
     const data = req.body;
     const newProductPost = new ProductPost(data);
 
+    //Saves the data into mongodb and logs a sucessful save
     newProductPost.save()
     .then((result)=> {
-        console.log("Data has been saved")
+        console.log("Data has been saved to database")
     })
     .catch((err)=> {
-        console.log(err)
+        console.log(err, "Data not able to be saved to database")
     })
 
-    res.json({
-        msg: 'Received product data'
-    })
 })
 
 module.exports = router;

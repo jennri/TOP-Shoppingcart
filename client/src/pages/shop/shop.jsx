@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { PRODUCTS } from "../../products"
 import { Product } from "../shop/product"
 import { Link  } from 'react-router-dom'
