@@ -13,7 +13,6 @@ export const ProductAdd = () => {
         e.preventDefault();
 
         const newProduct = {
-            id: new Date().getTime(),
             name: name,
             description: description,
             price: price,
@@ -25,7 +24,7 @@ export const ProductAdd = () => {
         setPrice('')
 
         axios({
-            url: 'http://localhost:8000/save',
+            url: '/save',
             method: 'POST',
             data: newProduct
         })

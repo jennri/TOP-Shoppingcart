@@ -1,24 +1,12 @@
-const cors = require('cors');
+
 const express = require('express');
 const morgan = require('morgan')
 const path = require('path')
 const mongoose = require('mongoose');
-const ProductPost = require('./models/productPost')
 const routes = require('./routes/api')
 
 const app = express();
 const PORT = process.env.PORT || 8000; 
-
-// HTTP request logger
-app.use(morgan('tiny'));
-
-app.use(express.json());
-app.use(cors());
-app.use('/', routes)
-
-//Middleware
-app.use(express.urlencoded({ extended: true }));
-
 
 
 // To connect with your mongoDB database
@@ -33,20 +21,14 @@ mongoose.connection.on('connected', ()=> {
     console.log("Notice -- Mongoose connection was made")
 })
 
+//Middleware
+//These two converts the form text from json to be stored in mongodb
+//Has to be placed after connecting to mongodb
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// //Saving data to mongo
-// const data = {
-//     product_name: 'product test 2',
-//     product_description: 'This is a test',
-//     product_price: 14.9
-// }
+// HTTP request logger
+app.use(morgan('tiny'));
 
-// const newProductPost = new ProductPost(data);
-// newProductPost.save()
-//     .then((result)=> {
-//         console.log("Data has been saved")
-//     })
-//     .catch((err)=> {
-//         console.log(err)
-//     })
+app.use('/', routes)
 
