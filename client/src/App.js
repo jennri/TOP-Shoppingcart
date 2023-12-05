@@ -6,6 +6,8 @@ import { ProductList } from './pages/shop/products.jsx'
 import { ProductAdd } from './pages/shop/product-add'
 import { Front } from './pages/front'
 import { Contact } from './pages/contact'
+
+import { ProductContextProvider } from './context/product-context.jsx'
 import { ShopContextProvider } from "./context/shop-context"
 
 // Importing from static folder
@@ -24,6 +26,7 @@ function App() {
   return (
     <div className="App">
       {/* All components will have access to shop inventory */}
+      <ProductContextProvider>
       <ShopContextProvider>
       <Router>
         {/* Navbar will be present on all pages */}
@@ -46,6 +49,8 @@ function App() {
         <Footbar />
       </Router>
       </ShopContextProvider>
+      </ProductContextProvider>
+
     </div>
   );
 }

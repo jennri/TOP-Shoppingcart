@@ -1,25 +1,27 @@
-import React, { createContext, useState } from 'react';
-import { ProductList } from "../pages/shop/products";
+import React, { createContext, useContext, useState } from 'react';
+import { ProductContext } from './product-context'
 
 export const ShopContext = createContext(null);
 
-// creates an array with all the products and have them all on 0 in the cart
-const getDefaultCart = () => {
-    let cart = {};
-    for (let i = 1; i < ProductList.length + 1; i++) {
-        cart[i] = 0;
-    }
-    return cart;
-};
-
 export const ShopContextProvider = (props) => {
-    const [cartItems, setCartItems] = useState(getDefaultCart());
+  const productsArray = useContext(ProductContext)
+    // creates an array with all the products and have them all on 0 in the cart
+    const getDefaultCart = () => {
+      let cart = {};
+      for (let i = 1; i < productsArray.length + 1; i++) {
+          cart[i] = 0;
+      }
+      console.log(cart)
+      return cart;
+    };
 
+    const [cartItems, setCartItems] = useState(getDefaultCart());
+    
     const totalCartAmount = () => {
         let totalAmount = 0;
         for (const item in cartItems) {
             if (cartItems[item] > 0){
-                let itemInfo = ProductList.find((product) => product.id === Number(item))
+                let itemInfo = productsArray.find((product) => product.id === Number(item))
                 totalAmount += cartItems[item] * itemInfo.price
             }
         }
