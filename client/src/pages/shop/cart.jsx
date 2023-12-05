@@ -1,5 +1,5 @@
 import React, { useContext} from "react";
-import { PRODUCTS } from "../../products";
+import { ProductList } from "./products";
 import { ShopContext } from "../../context/shop-context"
 import { CartItem } from './cart-item'
 
@@ -14,7 +14,7 @@ export const Cart = () => {
             </div>
 
             <div>
-            {PRODUCTS.map((product) => {
+            {ProductList.map((product) => {
                 if (cartItems[product.id] !== 0) {
                     return <CartItem data={product}/>
                 }
@@ -26,14 +26,9 @@ export const Cart = () => {
                 <div>
                     <p> Subtotal ${totalAmount}</p>
                 </div>
-                ) : (
-                    <h1> Empty cart </h1>
-                )
+                ) : (<h1> Empty cart </h1>)
                 }
-              
-
-            </div>
-            
+            </div>  
         </div>
     )
 }

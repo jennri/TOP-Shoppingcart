@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/navbar.jsx'
 import { Footbar } from './components/footbar.jsx'
-import { Products } from './pages/shop/shop'
+import { ProductList } from './pages/shop/products.jsx'
 import { ProductAdd } from './pages/shop/product-add'
 import { Front } from './pages/front'
 import { Contact } from './pages/contact'
@@ -30,7 +30,7 @@ function App() {
         <Navbar />
         <Routes>
             <Route path="/" element={<Front />}/> 
-            <Route path="/products" element={<Products />}/> 
+            <Route path="/products" element={<ProductList />}/> 
             <Route path="/product-add" element={<ProductAdd />}/> 
             <Route path="/contact-us" element={<Contact />}/> 
             <Route path="/terms-of-services" element={<Termsofservice />}/> 

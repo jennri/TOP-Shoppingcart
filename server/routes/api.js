@@ -8,7 +8,7 @@ router.get('/message', (req, res) => {
 });
 
 // This section will help you get a list of all the products.
-router.get('/test', controller.getAllProducts);
+router.get('/productList', controller.getAllProducts);
 
 
 router.post('/save', (req, res) => {
