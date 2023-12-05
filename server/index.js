@@ -9,8 +9,8 @@ const app = express();
 // To connect with your mongoDB database
 const connectToMongoDB = require("./database");
 const port = process.env.PORT || 8000;
-
 connectToMongoDB()
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

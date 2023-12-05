@@ -1,5 +1,6 @@
 const Product = require('./models/Product');
 
+//Retrieves the products from the database and displays it as a JSON response
 exports.getAllProducts = async (req, res) => {
   try {
     const products = await Product.find();

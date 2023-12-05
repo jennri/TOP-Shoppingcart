@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const Product = require('../models/Product')
-const db = require("../database");
 const controller = require("../controller")
 
 router.get('/message', (req, res) => {
