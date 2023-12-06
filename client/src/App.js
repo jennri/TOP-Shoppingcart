@@ -4,6 +4,8 @@ import { Navbar } from './components/navbar.jsx'
 import { Footbar } from './components/footbar.jsx'
 import { ProductList } from './pages/shop/products.jsx'
 import { ProductAdd } from './pages/shop/product-add'
+import { Checkout } from './pages/shop/checkout.jsx'
+
 import { Front } from './pages/front'
 import { Contact } from './pages/contact'
 
@@ -35,6 +37,9 @@ function App() {
             <Route path="/" element={<Front />}/> 
             <Route path="/products" element={<ProductList />}/> 
             <Route path="/product-add" element={<ProductAdd />}/> 
+            <Route path="/check-out" element={<Checkout />}/> 
+
+
             <Route path="/contact-us" element={<Contact />}/> 
             <Route path="/terms-of-services" element={<Termsofservice />}/> 
             <Route path="/shipping-policy" element={<Shippingpolicy />}/> 

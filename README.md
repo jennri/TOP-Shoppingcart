@@ -10,8 +10,13 @@ Bootstrapped with Create React App, uses MongoDB to store product data
 
 05/12/2023
 - Able to save and retrieve data from MongoDB
-Need to do;
+
+06/12/2023
 - Retrieve mongoDB database from the front end
 - Proper decent display of the data
+- Tracks cart inventory, cart modal displays items customer wish to purchase
+Need to do
 - Dynamic pages for each product with title, description, cost
+- Include products with two variations, eg sunscreen with a 60mL and 120mL size
 - Query mongoDB on the front end
+
