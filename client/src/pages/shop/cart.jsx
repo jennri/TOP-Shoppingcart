@@ -11,14 +11,16 @@ export const Cart = () => {
 
     return (
         <div>
+
             <div className='cart'> 
             <h1>Your cart items</h1>
             </div>
 
             <div>
             {productsArray.map((product) => {
-                if (cartItems[product.id] !== 0) {
-                    return <CartItem data={product}/>
+                if (cartItems[product.id] > 0) {
+
+                return <CartItem data={product}/>
                 }
             })}
             </div>
