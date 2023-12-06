@@ -10,7 +10,6 @@ export const ProductModel = (props) => {
 
     return (
         <div>
-        <p>{id}</p>
         <h1>{name}</h1>
         <p>{description}</p>
         <p>${price}</p>

@@ -37,7 +37,7 @@ export const Cart = () => {
             </div>  
 
             <div>
-            <Link to="/check-out">Proceed to Chekcout</Link>
+            <Link to="/check-out">Proceed to Checkout</Link>
             </div>
         </div>
     )

@@ -33,11 +33,11 @@ export const ShopContextProvider = (props) => {
   //Ensures changes in the item qty is done only if the current qty is a number
   //Without it, the object returns NaN
   const addToCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
+    setCartItems((prev) => ({ ...prev, [itemId]: Number(prev[itemId] || 0) + 1 }));
   };
 
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) - 1 }));
+    setCartItems((prev) => ({ ...prev, [itemId]: Number(prev[itemId] || 0) - 1 }));
   };
 
   const updateCartItemCount = (newAmount, itemId) => {
