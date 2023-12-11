@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import { ProductContext } from '../../context/product-context'
-import { ShopContext } from "../../context/shop-context"
-import { CartItem } from './cart-item'
-import { Link } from 'react-router-dom'
+import { ProductContext } from '../../../context/product-context'
+import { ShopContext } from "../../../context/shop-context"
+import { CartItem } from './CartModel'
 
+// Copied and pasted from the cart.jsx, needs to be changed 
+// More info could be added as there's more space 
 
-export const Cart = () => {
+export const Checkout = () => {
     const { cartItems, totalCartAmount } = useContext(ShopContext);
     const totalAmount = totalCartAmount()
 
@@ -35,10 +36,6 @@ export const Cart = () => {
                 ) : (<h1> Empty cart </h1>)
                 }
             </div>  
-
-            <div>
-            <Link to="/check-out">Proceed to Checkout</Link>
-            </div>
         </div>
     )
 }

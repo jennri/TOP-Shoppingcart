@@ -1,9 +1,13 @@
 import React, { useContext } from "react";
-import { ProductContext } from '../../context/product-context'
-import { ShopContext } from "../../context/shop-context"
-import { CartItem } from './cart-item'
+import { ProductContext } from '../../../context/product-context'
+import { ShopContext } from "../../../context/shop-context"
+import { CartItem } from './CartModel'
+import { Link } from 'react-router-dom'
 
-export const Checkout = () => {
+// If the product has more than 0 qty, it is displayed on the cart
+// Product informtation is feed through a cart item model
+
+export const Cart = () => {
     const { cartItems, totalCartAmount } = useContext(ShopContext);
     const totalAmount = totalCartAmount()
 
@@ -33,6 +37,10 @@ export const Checkout = () => {
                 ) : (<h1> Empty cart </h1>)
                 }
             </div>  
+
+            <div>
+            <Link to="/check-out">Proceed to Checkout</Link>
+            </div>
         </div>
     )
 }

@@ -1,0 +1,59 @@
+
+/*
+
+Product Page styling
+
+*/
+
+.product-display {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
+.filter-list-container {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: right;
+}
+
+.filter-list{
+    width: 100%;
+}
+
+
+.product-list-container{
+    grid-column: 4 / 13;
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+.product-list{
+    width: 100%;
+}
+
+.product-item-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+/* Products change to 1 column when it moves to a half of the window, change so 
+the filter side squeezes a bit to the left. Want to have two product columns. */
+
+.product-item {
+    border: 1px solid green;
+    width: 100%; 
+    max-width: 300px;
+}
+
+.title {
+    border-bottom: 1px solid black;
+}
+
+.filter-list-links {
+    display: block;
+    list-style-type: none;
+}

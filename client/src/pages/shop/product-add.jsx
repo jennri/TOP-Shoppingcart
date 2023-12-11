@@ -74,17 +74,6 @@ export const ProductAdd = () => {
                 </div>
                 <button>Submit</button>
             </form>
-
-            <div>
-                {productList.map((product) => <div>
-                    {product.name}
-                    {product.description}
-                    {product.price}
-
-                </div>)}
-
-            </div>
-
         </div>
 
     )

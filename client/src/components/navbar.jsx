@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'
-import { Cart } from '../pages/shop/cart'
+import { Cart } from '../pages/shop/cart/cart'
 
 import './bar.css'
-import '../pages/shop/cart-modal.css'
 
 import Modal from 'react-modal';
 import { Input, Button } from 'antd'

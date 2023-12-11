@@ -1,18 +1,25 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom';
+
+//Importing bars
 import { Navbar } from './components/navbar.jsx'
 import { Footbar } from './components/footbar.jsx'
-import { ProductList } from './pages/shop/products.jsx'
+
+import { ProductList } from './pages/shop/productpg.jsx'
 import { ProductAdd } from './pages/shop/product-add'
-import { Checkout } from './pages/shop/checkout.jsx'
+import { Checkout } from './pages/shop/cart/checkout.jsx'
 
-import { Front } from './pages/front'
-import { Contact } from './pages/contact'
+//Importing Products
+import { ProductDetails } from './pages/shop/productdetailspg.jsx'
+import './pages/shop/productpg.jsx'
 
+// Importing context
 import { ProductContextProvider } from './context/product-context.jsx'
 import { ShopContextProvider } from "./context/shop-context"
 
-// Importing from static folder
+// Importing static pages
+import { Front } from './pages/front'
+import { Contact } from './pages/contact'
 import { Termsofservice } from './pages/static/tos'
 import { Shippingpolicy } from './pages/static/shipping'
 import { Onlinetracking } from './pages/static/track'
@@ -27,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* All components will have access to shop inventory */}
+      {/* All components will have access to shop inventory, the shop context uses the product context, so it comes after */}
       <ProductContextProvider>
       <ShopContextProvider>
       <Router>
@@ -38,8 +45,8 @@ function App() {
             <Route path="/products" element={<ProductList />}/> 
             <Route path="/product-add" element={<ProductAdd />}/> 
             <Route path="/check-out" element={<Checkout />}/> 
-
-
+              <Route path='/' exact Component={ProductList}></Route>
+              <Route path='/products/:id' Component={ProductDetails}></Route>
             <Route path="/contact-us" element={<Contact />}/> 
             <Route path="/terms-of-services" element={<Termsofservice />}/> 
             <Route path="/shipping-policy" element={<Shippingpolicy />}/> 

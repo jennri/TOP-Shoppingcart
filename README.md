@@ -17,7 +17,10 @@ Bootstrapped with Create React App, uses MongoDB to store product data
 - Tracks cart inventory, cart modal displays items customer wish to purchase
 - Cart modal, the qty added must be updated on enter or a click outside of the box. It should not update immediately. Deleting the value assumes the item qty is 0 and it is promptly removed.
 Need to do
+- Pages for products
+- Query mongoDB on the front end
 - Dynamic pages for each product with title, description, cost
 - Include products with two variations, eg sunscreen with a 60mL and 120mL size
-- Query mongoDB on the front end
+- Scrolling down brings an more compact version of the navbar
+- Checkout pages
 
