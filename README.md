@@ -22,7 +22,6 @@ Bootstrapped with Create React App, uses MongoDB to store product data
 - Query mongoDB on the front end
 - Dynamic pages for each product with title, description, cost
 Need to do
-- Start on adding reviews to each product
 - User and admin, users can submit reviews, admin must approve
 - Admin can sign in and have power to edit and add products
 - Include products with two variations, eg sunscreen with a 60mL and 120mL size
