@@ -5,16 +5,17 @@ import { BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom'
 import { Navbar } from './components/navbar.jsx'
 import { Footbar } from './components/footbar.jsx'
 
-import { ProductList } from './pages/shop/productpg.jsx'
+import { ProductList } from './pages/shop/shop-page.jsx'
 import { ProductAdd } from './pages/shop/product-add'
 import { Checkout } from './pages/shop/cart/checkout.jsx'
 
 //Importing Products
-import { ProductDetails } from './pages/shop/productdetailspg.jsx'
-import './pages/shop/productpg.jsx'
+import { ProductDetails } from './pages/shop/product-page.jsx'
+import './pages/shop/shop-page.jsx'
 
 // Importing context
 import { ProductContextProvider } from './context/product-context.jsx'
+import { ReviewContextProvider } from './context/review-context.jsx'
 import { ShopContextProvider } from "./context/shop-context"
 
 // Importing static pages
@@ -37,6 +38,7 @@ function App() {
       {/* All components will have access to shop inventory, the shop context uses the product context, so it comes after */}
       <ProductContextProvider>
       <ShopContextProvider>
+      <ReviewContextProvider>
       <Router>
         {/* Navbar will be present on all pages */}
         <Navbar />
@@ -45,8 +47,10 @@ function App() {
             <Route path="/products" element={<ProductList />}/> 
             <Route path="/product-add" element={<ProductAdd />}/> 
             <Route path="/check-out" element={<Checkout />}/> 
+              
               <Route path='/' exact Component={ProductList}></Route>
               <Route path='/products/:id' Component={ProductDetails}></Route>
+              
             <Route path="/contact-us" element={<Contact />}/> 
             <Route path="/terms-of-services" element={<Termsofservice />}/> 
             <Route path="/shipping-policy" element={<Shippingpolicy />}/> 
@@ -60,6 +64,7 @@ function App() {
           </Routes>
         <Footbar />
       </Router>
+      </ReviewContextProvider>
       </ShopContextProvider>
       </ProductContextProvider>
 

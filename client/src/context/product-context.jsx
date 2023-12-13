@@ -19,9 +19,14 @@ export const ProductContextProvider = (props) => {
     useEffect(() => {
         const mappedProducts = products.map(product => ({
             id: product._id,
+            brand: product.brand,
             name: product.name,
-            description: product.description,
             price: product.price,
+            description: product.description,
+            madein: product.madein,
+            ingredients: product.ingredients,
+            directions: product.directions
+            
         }));
 
         // Set the new array in state

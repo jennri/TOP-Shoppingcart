@@ -4,9 +4,14 @@ const mongoose = require('mongoose');
 //Basic build right now, will add more later.
 const Schema = mongoose.Schema;
 const ProductSchema = new Schema ({
+    brand: String,
     name: String,
+    price: Number,
     description : String,
-    price: Number
+    madein : String,
+    ingredients : String,
+    directions : String
+    
 })
 
 //Model

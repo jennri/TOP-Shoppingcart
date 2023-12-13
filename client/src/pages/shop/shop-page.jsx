@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ProductContext } from '../../context/product-context'
 import { ProductModel } from "./ProductModel"
 
-import './productpg.css'
+import './shop-page.css'
 
 export const ProductList = () => {
     const productsArray = useContext(ProductContext)
@@ -16,7 +16,7 @@ export const ProductList = () => {
     //Issue with the product page not loading all the products.
     //Can be solved by only selecting on types/ categories of products
     //Removing the need for an all product page
-    
+
 
     const filterItemsPrice = () => {
         const filteredArray = Object.values(productsArray).
@@ -51,6 +51,7 @@ export const ProductList = () => {
                 <div className='title'>
                 <h1>List of products</h1>
                 </div>
+                
                 <div className="filter-container">
                 <Link to="/product-add">Add new product</Link>
                 <label htmlFor="categoryFilter">Filter by Category:</label>
